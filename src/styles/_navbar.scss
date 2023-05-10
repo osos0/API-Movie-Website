@@ -1,0 +1,18 @@
+@use "./Vars" as *;
+
+.navFix {
+  flex-grow: 0;
+  padding: auto 20px;
+  //   width: 50%;
+  //   border: $test;
+  li {
+    margin: auto 20px;
+  }
+}
+.licolor {
+  color: white;
+}
+
+.logostyling {
+  width: 100px;
+}

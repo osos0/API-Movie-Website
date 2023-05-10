@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+html {
+  min-height: 100vh !important;
+}
+
+select {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  font-size: 20px;
+  margin: 0 5px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+
+input {
+  outline: none;
+  border: 1px solid gainsboro;
+  padding: 5px;
+  border-radius: 10px;
+  margin: auto 5px;
+}
+
+button {
+  background-color: red;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 20px;
+  margin: 10px;
+}
+
+.btnReverse {
+  color: white !important;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+form {
+  padding: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+h4 {
+  font-size: 23px;
+  padding: 5px;
+}
+
+p {
+  font-size: 14px;
+  padding: 5px;
+}
+
+svg {
+  color: black;
+  font-size: 20px;
+  margin: auto 8px;
+}
+
+a {
+  margin: 10px 0;
+  color: black;
+  text-decoration: none;
+}
+
+span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.bgB {
+  background-color: rgb(46, 46, 46);
+  color: aliceblue;
+}
+
+.navFix {
+  flex-grow: 0;
+  padding: auto 20px;
+}
+.navFix li {
+  margin: auto 20px;
+}
+
+.licolor {
+  color: white;
+}
+
+.logostyling {
+  width: 100px;
+}
+
+.mainpostionBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainpostionBox .flowBox {
+  border: 1px solid black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainpostionBox .flowBox .deepBox {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.mainpostionBox .flowBox .deepBox .smallImgCon {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-size: cover;
+}
+.mainpostionBox .flowBox .deepBox .one {
+  background-image: url("../john.jpg");
+}
+.mainpostionBox .flowBox .deepBox .two {
+  background-image: url("../mario.jpg");
+}
+.mainpostionBox .flowBox .deepBox .three {
+  background-image: url("../guardians.jpg");
+}
+.mainpostionBox .flowBox .deepBox .smallImgLeftCon {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.mainpostionBox .flowBox .deepBox .smallImgLeftCon p {
+  height: 50%;
+}
+.mainpostionBox .flowBox .deepBox .smallImgLeftCon button {
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+.mainpostionBox .flowBox .deepBox .smallImgLeftCon .btnReverse {
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.mainpostionBox::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+@media (max-width: 767px) {
+  .mainpostionBox::after {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
+  .smallImgCon {
+    display: none;
+  }
+  .deepBox {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    display: none;
+  }
+  h2 {
+    font-size: smaller;
+  }
+  button {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .btnReverse {
+    font-size: 10px;
+  }
+}
+.boxOfMovie {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms;
+}
+.boxOfMovie img {
+  height: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+.boxOfMovie h4 {
+  padding: 5px;
+  height: 120px;
+  width: 100%;
+  text-align: center;
+}
+
+.pandimgBox {
+  border: 1px solid red;
+  position: relative;
+}
+
+.pBox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 50%;
+  color: white;
+  display: none;
+  background: linear-gradient(transparent, rgba(126, 126, 126, 0.5), transparent);
+}
+
+.boxhover:hover {
+  transform: translateY(10px);
+  opacity: 80%;
+  background: linear-gradient(c);
+  transition: 300ms;
+}
+
+.boxhover:hover .pBox {
+  transition: 1200ms ease-in-out;
+  display: flex;
+}
+
+.btnCon {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.btnCon .IMDBbtn {
+  font-size: 20px;
+}
+
+.footerCon {
+  background-image: url("../1000.webp");
+  background-size: contain;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.footerCon::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  z-index: 0 !important;
+}
+
+.logostylingFooter {
+  padding: 20px;
+  z-index: 1 !important;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding: 20px;
+}
+.logostylingFooter .logostylingFooterimg {
+  width: 160px;
+  height: 160px;
+}
+
+.rightFooter {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */
