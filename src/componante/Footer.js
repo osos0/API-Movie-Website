@@ -22,7 +22,7 @@ const Footer = () => {
                 <li className="text-danger">Our Team</li>
               </ul>
             </div>
-            <div className="col-md-4 col-sm-12 rightFooter">
+            <div className="col-md-4 col-sm-12 d-lg-flex d-md-flex d-sm-none rightFooter">
               <p className="text-danger">
                 Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore
                 smod tempor incididunt ut labore et. Lorem ipsum is dolor sit

@@ -1,0 +1,28 @@
+.bigPic {
+  overflow: hidden;
+  padding: 10px;
+  border-color: aquamarine;
+  min-height: 100vh;
+  background: linear-gradient(transparent, rgba(0, 0, 0));
+  .liftConDet {
+    padding: 15px;
+    img {
+      border: red 5px solid;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin: auto;
+    }
+  }
+  .rightConDet {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    span {
+      color: red;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Imdb() {
   const [Imdbapi, setImdbapi] = useState([]);
@@ -92,6 +94,7 @@ function Imdb() {
   // ];
 
   const arrSlice = Imdbapi.slice(0, Btnount);
+  // console.log(arrSlice);
 
   function Viewmore() {
     setBtnount(Btnount + 4);
@@ -106,11 +109,13 @@ function Imdb() {
           {arrSlice.map((imd) => {
             return (
               <div
-                key={imd.id}
+                key={imd.rank}
                 className="col-lg-3 col-md-6 col-sm-12 boxOfMovie"
               >
-                <img src={imd.image} alt={imd.rank} />
-                <h4>{imd.title}</h4>
+                <Link to={`/film/${imd.rank}`}>
+                  <img src={imd.image} alt={imd.rank} />
+                  <h4>{imd.title}</h4>
+                </Link>
               </div>
             );
           })}
