@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Filmdetails() {
-  const [Imdbapi, setImdbapi] = useState({});
+  const [Imdbapi, setImdbapi] = useState([]);
   const prams = useParams();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Filmdetails() {
       .then((res) => res.json())
       //   .then((data) => setImdbapi(data[prams.filmid - 1]));
       .then((data) => setImdbapi(data[prams.filmid - 1]));
-  }, {});
+  }, []);
   //   const arr = [
   //     {
   //       id: "1",

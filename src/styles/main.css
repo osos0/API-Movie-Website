@@ -313,4 +313,21 @@ span {
 }
 .bigPic .rightConDet span {
   color: red;
+}
+
+.bigMovieContainer {
+  min-height: 100vh;
+  width: 100%;
+  border: 1px solid black;
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+}
+.bigMovieContainer .liftConDet {
+  padding: 15px;
+}
+.bigMovieContainer .liftConDet img {
+  border: red 5px solid;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */

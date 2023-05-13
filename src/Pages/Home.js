@@ -4,16 +4,14 @@ import Imdb from "../componante/Imdb";
 import Footer from "../componante/Footer";
 import Slider from "../componante/Slider";
 import Moviesrate from "../componante/Moviesrate";
-import Tvlist from "../componante/Tvlist";
 
 const Home = () => {
   return (
     <div className="bgB">
       <Navbar />
       <Slider />
-      <Imdb />
+      {/* <Imdb /> */}
       <Moviesrate />
-      <Tvlist />
       <Footer />
     </div>
   );

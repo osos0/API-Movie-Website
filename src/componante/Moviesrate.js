@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 function Moviesrate() {
   const [Movies, setMovies] = useState([]);
   const [Btnount, setBtnount] = useState(4);
@@ -35,17 +36,19 @@ function Moviesrate() {
       <div className="container">
         <h1>Top Rated</h1>
         <div className="row">
-          {displayMovies2.map((film) => {
+          {displayMovies2.map((film, ind) => {
             return (
               <div
                 key={film.id}
                 className="col-lg-3 col-md-6 col-sm-12 boxOfMovie"
               >
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                  alt={film.id}
-                />
-                <h4>{film.title}</h4>
+                <Link to={`/movie/${ind}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                    alt={film.id}
+                  />
+                  <h4>{film.title}</h4>
+                </Link>
               </div>
             );
           })}
