@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Filmdetails() {
   const [Imdbapi, setImdbapi] = useState([]);
   const prams = useParams();
 
-  useEffect(() => {
-    fetch(`https://imdb-top-100-movies.p.rapidapi.com`, {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "f7f48eaa1dmshe05d714559f0236p1d1e95jsnadef6b25e692",
-        "X-RapidAPI-Host": `imdb-top-100-movies.p.rapidapi.com`,
-      },
-    })
-      .then((res) => res.json())
-      //   .then((data) => setImdbapi(data[prams.filmid - 1]));
-      .then((data) => setImdbapi(data[prams.filmid - 1]));
-  }, []);
+  // useEffect(() => {
+  fetch(`https://imdb-top-100-movies.p.rapidapi.com`, {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "f7f48eaa1dmshe05d714559f0236p1d1e95jsnadef6b25e692",
+      "X-RapidAPI-Host": `imdb-top-100-movies.p.rapidapi.com`,
+    },
+  })
+    .then((res) => res.json())
+    //   .then((data) => setImdbapi(data[prams.filmid - 1]));
+    .then((data) => setImdbapi(data[prams.filmid - 1]));
+  // }, []);
   //   const arr = [
   //     {
   //       id: "1",

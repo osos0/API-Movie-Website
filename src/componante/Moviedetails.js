@@ -1,31 +1,28 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Moviedetails() {
   const [Movies, setMovies] = useState([]);
   const prams = useParams();
 
-  useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMWIwYmU1Y2EyMDQzMWEzNWM4NmE0Y2U4ZTgwMjA1NSIsInN1YiI6IjY0NTdlMjAwNzdkMjNiMDExOWUwMTM4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xVspGDSdPQb3b8HlCTPtTfs9Wyu8fqO5wlgtebxNVC0",
-      },
-    };
+  // useEffect(() => {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMWIwYmU1Y2EyMDQzMWEzNWM4NmE0Y2U4ZTgwMjA1NSIsInN1YiI6IjY0NTdlMjAwNzdkMjNiMDExOWUwMTM4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xVspGDSdPQb3b8HlCTPtTfs9Wyu8fqO5wlgtebxNVC0",
+    },
+  };
 
-    fetch(
-      "https://api.themoviedb.org/3/trending/all/day?language=en-US",
-      options
-    )
-      .then((response) => response.json())
-      //   .then((response) => console.log(response.results[prams.movieid]))
-      .then((response) => setMovies(response.results[prams.movieid]))
-      // .then((response) => setMovies(response))
-      .catch((err) => console.error(err));
-  }, []);
+  fetch("https://api.themoviedb.org/3/trending/all/day?language=en-US", options)
+    .then((response) => response.json())
+    //   .then((response) => console.log(response.results[prams.movieid]))
+    .then((response) => setMovies(response.results[prams.movieid]))
+    // .then((response) => setMovies(response))
+    .catch((err) => console.error(err));
+  // }, []);
 
   console.log(Movies);
 
