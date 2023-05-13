@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../componante/Navbar";
-import Imdb from "../componante/Imdb";
+// import Imdb from "../componante/Imdb";
 import Footer from "../componante/Footer";
 import Slider from "../componante/Slider";
 import Moviesrate from "../componante/Moviesrate";
