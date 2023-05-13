@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 function Moviesrate() {
   const [Movies, setMovies] = useState([]);
-  const [Btnount, setBtnount] = useState(4);
+  const [Btnount, setBtnount] = useState(8);
 
   useEffect(() => {
     const options = {
